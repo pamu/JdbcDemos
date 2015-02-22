@@ -8,7 +8,9 @@
         <root url="file://$USER_HOME$/.sbt/boot/scala-2.10.4/lib/scala-reflect.jar" />
       </compiler-classpath>
     </properties>
-    <CLASSES />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.sbt/boot/scala-2.10.4/lib/scala-library.jar!/" />
+    </CLASSES>
     <JAVADOC />
     <SOURCES />
   </library>

@@ -43,9 +43,10 @@ public class DbUtils {
     public static int insertPosition(Position position) throws Exception {
         try {
             Connection conn = getConnection();
-            PreparedStatement stmt = conn.prepareStatement("?, ?, ?");
-            stmt.setString(0, position.name);
-            stmt.setString(1, position.description);
+            PreparedStatement stmt = conn.prepareStatement("insert into \"Positions\" (\"positionName\", \"description\") values (?, ?) ");
+            stmt.setString(1, position.name);
+            stmt.setString(2, position.description);
+            //stmt.setInt(3, position.positionId);
             return stmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
