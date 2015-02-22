@@ -5,7 +5,7 @@ public class Position {
     String name;
     String description;
     int positionId;
-    public Position(String name, String desc, int positionI) {
+    public Position(String name, String desc, int positionId) {
         this.description = desc;
         this.name = name;
         this.positionId = positionId;
